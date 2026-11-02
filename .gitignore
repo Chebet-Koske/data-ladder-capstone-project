@@ -1,0 +1,6 @@
+   data/*
+   !data/README.md
+   *.csv
+   *.csv.gz
+   *.db
+   .ipynb_checkpoints/
