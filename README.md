@@ -6,7 +6,7 @@ A time series analysis of three years of daily
 FMCG sales (1.1M rows, 13 stores, 7 European countries, 102 SKUs) to understand
 the drivers of demand and forecast it.
 
-**Status:** in progress (Steps 1 and 2 complete)
+**Status:** in progress (Steps 1 and 3 complete)
 
 ## Repository structure
 
@@ -50,7 +50,7 @@ Running the notebook creates these files automatically. They are not tracked by 
 |---|---|---|
 | 1 | Data preparation and SQL retrieval | Done |
 | 2 | Exploratory data analysis and segmentation | Done |
-| 3 | Statistical testing | In progress |
+| 3 | Statistical testing | Done |
 | 4 | Feature engineering | To do |
 | 5 | Machine learning forecasting | To do |
 | 6 | Explainability and ethics | To do |
