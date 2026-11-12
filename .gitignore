@@ -49,3 +49,9 @@ env/
 Thumbs.db
 .idea/
 .vscode/
+
+# Local notebook backups
+notebooks/*_backup.ipynb
+
+# Jupyter temporary files
+.ipynb_checkpoints/
