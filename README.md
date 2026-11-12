@@ -91,10 +91,7 @@ flowchart LR
 ## 3. Repository structure
 
 ```
-capstone-fmcg-forecasting/
-├── README.md                          Status, results, disclosure (this file)
-├── requirements.txt                   Python dependencies
-├── .gitignore                         Keeps data, databases and compressed outputs out of Git
+data-ladder-capstone-project/
 ├── data/
 │   ├── README.md                      Where to get the raw CSV (tracked)
 │   ├── fmcg_sales_3years_1M_rows.csv  Raw data (NOT tracked, download it yourself)
@@ -110,6 +107,12 @@ capstone-fmcg-forecasting/
 └── notebooks/
     ├── README.md
     ├── capstone_code.ipynb
+├── scripts/
+│   ├── README.md
+├── .gitignore                         Keeps data, databases and compressed outputs out of Git  
+├── README.md                          Status, results, disclosure (this file)
+├── requirements.txt                   Python dependencies
+
 ```
 
 ---
