@@ -125,7 +125,7 @@ data-ladder-capstone-project/
 ```bash
 # 1. Clone
 git clone https://github.com/<your-username>/data-ladder-capstone-project.git
-cd capstone-fmcg-forecasting
+cd data-ladder-capstone-project
 
 # 2. Install dependencies
 pip install -r requirements.txt
@@ -151,7 +151,7 @@ The notebook will generate the other files with (NOT TRACKED) in `data/processed
 2. Open `notebooks/capstone_code.ipynb`.
 3. Choose **Kernel → Restart & Run All**. Wait for it to finish with no errors.
    
-```
+
 
 **What each step reads, writes and generates**
 
@@ -326,8 +326,7 @@ For a household that buys staples from a duka, a stockout is not just lost reven
 
 **Tools:** Python, Jupyter, SQLite, pandas, NumPy, SciPy, statsmodels, scikit-learn, matplotlib, seaborn, joblib, Git/GitHub.
 
-**AI assistance:** I used an AI assistant (Claude, by Anthropic) as a support tool during this project, for explaining
-concepts, reviewing and debugging code, assistance in drafting documentation (this README and a study guide), and restructuring the repository.
+**AI assistance:** I used an AI assistant (Claude, by Anthropic) as a support tool during this project, for reviewing and debugging code and assistance in editing and restructuring of the repository.
 The analysis was run by me in Jupyter, and every number in this README comes from the executed notebooks.
 I reviewed the code and results and I am responsible for the content of this repository.
 
