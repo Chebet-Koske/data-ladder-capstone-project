@@ -18,5 +18,3 @@ ipykernel>=6.25
 nbconvert>=7.0         # optional: run notebooks from the command line
 
 # Note: sqlite3 is part of the Python standard library (no install needed).
-# After a clean "Restart and Run All", run `pip freeze` and consider pinning
-# exact versions (==) here for full reproducibility.
