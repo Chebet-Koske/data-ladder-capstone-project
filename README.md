@@ -100,25 +100,17 @@ capstone-fmcg-forecasting/
 │   ├── fmcg_sales_3years_1M_rows.csv  Raw data (NOT tracked, download it yourself)
 │   ├── fmcg.db                        SQLite database, created by Step 1 (NOT tracked)
 │   └── processed/                     Created by the notebooks (NOT tracked)
-│       ├── .gitkeep                   Keeps the empty folder in Git
-│       ├── sales_clean.csv.gz         Step 1: cleaned sales + promotion calendar
-│       ├── sku_segments.csv           Step 2: ABC/XYZ class of each SKU
-│       ├── train_scaled.csv.gz        Step 4: scaled training set (88,981 rows)
-│       ├── test_scaled.csv.gz         Step 4: scaled test set (18,584 rows)
-│       ├── scaler.joblib              Step 4: StandardScaler fitted on train only
-│       ├── test_results.csv           Step 5: actuals + every model's forecast
-│       └── rf_reg.joblib              Step 5: fitted Random Forest (used in Step 6)
+│       ├── sales_clean.csv.gz         Step 1: cleaned sales + promotion calendar (NOT tracked)
+│       ├── sku_segments.csv           Step 2: ABC/XYZ class of each SKU (NOT tracked)
+│       ├── train_scaled.csv.gz        Step 4: scaled training set (88,981 rows) (NOT tracked)
+│       ├── test_scaled.csv.gz         Step 4: scaled test set (18,584 rows) (NOT tracked)
+│       ├── scaler.joblib              Step 4: StandardScaler fitted on train only (NOT tracked)
+│       ├── test_results.csv           Step 5: actuals + every model's forecast (NOT tracked)
+│       └── rf_reg.joblib              Step 5: fitted Random Forest (used in Step 6) (NOT tracked)
 └── notebooks/
-    ├── 01_data_preparation_sql.ipynb
-    ├── 02_exploratory_analysis.ipynb
-    ├── 03_statistical_testing.ipynb
-    ├── 04_feature_engineering.ipynb
-    ├── 05_ml_forecasting.ipynb
-    └── 06_explainability_ethics.ipynb
+    ├── README.md
+    ├── capstone_code.ipynb
 ```
-
-Every notebook finds the project root automatically, so paths work on Windows, macOS and Linux
-no matter which folder Jupyter was started from.
 
 ---
 
@@ -132,18 +124,9 @@ no matter which folder Jupyter was started from.
 git clone https://github.com/<your-username>/capstone-fmcg-forecasting.git
 cd capstone-fmcg-forecasting
 
-# 2. Create and activate an isolated environment
-python -m venv .venv
-# macOS / Linux:
-source .venv/bin/activate
-# Windows (PowerShell):
-.venv\Scripts\Activate.ps1
-
-# 3. Install dependencies
+# 2. Install dependencies
 pip install -r requirements.txt
 
-# 4. (optional) Register the environment as a Jupyter kernel
-python -m ipykernel install --user --name fmcg-capstone
 ```
 
 Anaconda users can instead run `conda create -n fmcg-capstone python=3.11` and then `pip install -r requirements.txt`.
@@ -158,27 +141,18 @@ data/fmcg_sales_3years_1M_rows.csv
 
 ## 5. How to run (Restart and Run All)
 
-The notebooks depend on each other through files in `data/processed/`, so **run them in order, 01 to 06**.
+The notebook will generate the other files with (NOT TRACKED) in `data/processed/`, so .
 
 **In Jupyter (interactive)**
 1. From the project root run `jupyter notebook` (or `jupyter lab`).
-2. Open `notebooks/01_data_preparation_sql.ipynb`.
+2. Open `notebooks/capstone_code.ipynb`.
 3. Choose **Kernel → Restart & Run All**. Wait for it to finish with no errors.
-4. Repeat for notebooks 02, 03, 04, 05 and 06, in that order.
-
-**From the command line (non-interactive)**
-
-```bash
-cd notebooks
-for nb in 01_data_preparation_sql 02_exploratory_analysis 03_statistical_testing \
-          04_feature_engineering 05_ml_forecasting 06_explainability_ethics; do
-  jupyter nbconvert --to notebook --execute --inplace "$nb.ipynb" || break
-done
+   
 ```
 
-**What each notebook reads and writes**
+**What each step reads, writes and generates**
 
-| Notebook | Reads | Writes |
+| Steps | Reads | Writes |
 |---|---|---|
 | 01 Data preparation and SQL | raw CSV | `data/fmcg.db`, `data/processed/sales_clean.csv.gz` |
 | 02 Exploratory analysis | `sales_clean.csv.gz` | `data/processed/sku_segments.csv` |
@@ -350,7 +324,7 @@ For a household that buys staples from a duka, a stockout is not just lost reven
 **Tools:** Python, Jupyter, SQLite, pandas, NumPy, SciPy, statsmodels, scikit-learn, matplotlib, seaborn, joblib, Git/GitHub.
 
 **AI assistance:** I used an AI assistant (Claude, by Anthropic) as a support tool during this project, for explaining
-concepts, reviewing and debugging code, drafting documentation (this README and a study guide), and restructuring the repository.
+concepts, reviewing and debugging code, assistance in drafting documentation (this README and a study guide), and restructuring the repository.
 The analysis was run by me in Jupyter, and every number in this README comes from the executed notebooks.
 I reviewed the code and results and I am responsible for the content of this repository.
 
