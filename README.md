@@ -124,7 +124,7 @@ data-ladder-capstone-project/
 
 ```bash
 # 1. Clone
-git clone https://github.com/<your-username>/capstone-fmcg-forecasting.git
+git clone https://github.com/<your-username>/data-ladder-capstone-project.git
 cd capstone-fmcg-forecasting
 
 # 2. Install dependencies
