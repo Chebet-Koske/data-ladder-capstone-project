@@ -1,0 +1,22 @@
+# Core data stack
+pandas>=2.0
+numpy>=1.24
+
+# Statistics and machine learning
+scipy>=1.10
+scikit-learn>=1.3      # RandomForest, HistGradientBoosting, permutation_importance
+statsmodels>=0.14      # adfuller (ADF stationarity test, Step 5)
+joblib>=1.3            # saving the scaler and model
+
+# Visualisation
+matplotlib>=3.7
+seaborn>=0.12
+
+# Notebook environment
+notebook>=7.0
+ipykernel>=6.25
+nbconvert>=7.0         # optional: run notebooks from the command line
+
+# Note: sqlite3 is part of the Python standard library (no install needed).
+# After a clean "Restart and Run All", run `pip freeze` and consider pinning
+# exact versions (==) here for full reproducibility.
